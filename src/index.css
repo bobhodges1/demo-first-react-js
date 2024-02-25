@@ -5,3 +5,8 @@
 .weird {
     border: 4px dashed lime;
 }
+
+div {
+    border: 1px solid red;
+    padding: 1rem
+}
