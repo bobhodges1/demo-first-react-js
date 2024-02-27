@@ -1,4 +1,8 @@
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 import episodes from "../data/episodes.json";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 function Greeting({ names }) {
     return <h2>Hello, {names.join(', ')}</h2>;
@@ -17,38 +21,30 @@ function TVEpisode(props) {
         <div>
             <h2>{props.episodeData.name}</h2>
             <p>{props.episodeData.summary}</p>
+            <br />
+            <img src={props.episodeData.image.medium }/>
         </div>
     );
 }
 
-function Footer() {
-    return (
-        <footer>
-            Uses <a href="https://oxal.org/projects/sakura/">Sakura CSS.</a>
-            <br></br>
-            Uses <a href="https://github.com/bobhodges1/demo-first-react-js"> Bob's Github for source code.</a>
-        </footer>
-    );
-}
-
-function MyHeader() {
-    return (
-        <header>
-            <h1>Welcome to my first React app</h1>
-        </header>
-    );
+function ReverseWord(props) {
+        return (
+        <p>
+            {props.originalWord.split('').reverse().join('')}
+        </p>
+    )
 }
 
 export default function App() {
     return (
         <div>
-            <MyHeader />
-            <Greeting names= {["Dani", "Neill", "Huss"]} />
-            
+            <ReverseWord originalWord= "Kumquat" />
+            <Header />
+            <Greeting names= {["Dani", "Neill", "Huss"]} />            
             <Sum num1={10} num2={2010} label="stetson hats"/>
             <Sum num1={39} num2={5} label="ponchos" /> 
             <TVEpisode episodeData={episodes[0]} />
-            <TVEpisode episodeData={episodes[1]} />
+            <TVEpisode episodeData={episodes[1]} />            
             <Footer />
         </div>
     );
