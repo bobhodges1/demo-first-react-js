@@ -3,6 +3,7 @@ import React from "react";
 import episodes from "../data/episodes.json";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Greeting2 } from "./Greeting2";
 
 function Greeting({ names }) {
     return <h2>Hello, {names.join(', ')}</h2>;
@@ -40,7 +41,8 @@ export default function App() {
         <div>
             <ReverseWord originalWord= "Kumquat" />
             <Header />
-            <Greeting names= {["Dani", "Neill", "Huss"]} />            
+            <Greeting names= {["Dani", "Neill", "Huss"]} /> 
+            <Greeting2 names= {["Dani", "Neill", "Huss"]} />          
             <Sum num1={10} num2={2010} label="stetson hats"/>
             <Sum num1={39} num2={5} label="ponchos" /> 
             <TVEpisode episodeData={episodes[0]} />
