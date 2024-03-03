@@ -5,7 +5,12 @@ export function GreetingEN({ names }) {
 export function GreetingESP(props) {
   const htmlFrags = [];
   for (let name of props.names) {
-    let frag = <p key={name}>{name}</p>;
+    let frag = (
+      <p key={name}>
+        {name}
+        <button>{name}</button>
+      </p>
+    );
     htmlFrags.push(frag);
   }
 
@@ -20,7 +25,10 @@ export function GreetingITA() {
   ];
 
   const listPeople = people.map((person) => (
-    <li key={person.id}>Ciao, {person.name}</li>
+    <li key={person.id}>
+      Ciao, {person.name}
+      <button>{person.name}</button>
+    </li>
   ));
   return <ul>{listPeople}</ul>;
 }
