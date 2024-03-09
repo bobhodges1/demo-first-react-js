@@ -9,10 +9,12 @@ import { TVEpisode } from "./Entertainment";
 import { ReverseWord } from "./StringFunctions";
 import { CoinFlip } from "./Conditionals";
 import { Counter } from "./counter";
+import { TicTacToe } from "./tictactoe";
 
 export default function App() {
   return (
     <div>
+      <TicTacToe />
       <Header />
       <div>
         <GreetingEN names={["Dani", "Neill", "Huss"]} />
