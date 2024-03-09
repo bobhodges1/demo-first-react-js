@@ -14,7 +14,13 @@ export function TicTacToe() {
     { side: "front" },
   ];
   console.log(data.length);
-  const gridCells = data.map((cell) => <div className="cell"></div>);
+  const gridCells = data.map((cell) => (
+    <div className="cell">
+      <button>Add ✅</button>
+      <br></br>
+      <button>Add ❌</button>
+    </div>
+  ));
   console.log(gridCells.cell);
   return <div className="gameGrid">{gridCells}</div>;
 }
