@@ -30,6 +30,7 @@ export default function App() {
         <TVEpisode episodeData={episodes[1]} />
       </div>
       <ReverseWord originalWord="Kumquat" />
+      <TicTacToe />
       <CoinFlip />
       <Counter />
       <Footer />
